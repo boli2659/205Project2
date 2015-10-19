@@ -10,11 +10,10 @@ for tile in tiles:
 
 image_slicer.save_tiles(tiles)
 
-
-image1 = Image.open('C:\\Users\\Michael\\Desktop\\Project2\\_02_02.png')
-image2 = Image.open('C:\\Users\\Michael\\Desktop\\Project2\\_02_01.png')
-image3 = Image.open('C:\\Users\\Michael\\Desktop\\Project2\\_01_02.png')
-image4 = Image.open('C:\\Users\\Michael\\Desktop\\Project2\\_01_01.png')
+image1 = Image.open('C:\\Users\\Michael\\Documents\\205Project2\\Project2\\_02_02.png')
+image2 = Image.open('C:\\Users\\Michael\\Documents\\205Project2\\Project2\\_02_01.png')
+image3 = Image.open('C:\\Users\\Michael\\Documents\\205Project2\\Project2\\_01_02.png')
+image4 = Image.open('C:\\Users\\Michael\\Documents\\205Project2\\Project2\\_01_01.png')
 
 width,height = image1.size
 width = (width * 2) + 20
@@ -23,8 +22,8 @@ jigsaw = Image.new('RGB',(width,height))
 width,height = image1.size
 jigsaw.paste(image1,(0,0))
 jigsaw.paste(image2,(width + 10,0))
-jigsaw.paste(image3,(0,width + 10))
-jigsaw.paste(image4,(width + 10, width + 10))
+jigsaw.paste(image3,(0,height + 10))
+jigsaw.paste(image4,(width + 10, height + 10))
 
 jigsaw.show()
 
@@ -56,7 +55,7 @@ print ("Jigsaw Solved!")
 
 jigsaw.paste(image4,(0,0))
 jigsaw.paste(image3,(width + 10,0))
-jigsaw.paste(image2,(0,width + 10))
-jigsaw.paste(image1,(width + 10, width + 10))
+jigsaw.paste(image2,(0,height + 10))
+jigsaw.paste(image1,(width + 10, height+ 10))
 
 jigsaw.show()
